@@ -69,7 +69,7 @@ $(document).ready(function() {
         return false;
       };
     var pizza = new Pizza();
-    var size = $(this.sze).val();
+    var size = $(this.size).val();
     pizza.priceBySize(size);
     var toppings = [];
 
