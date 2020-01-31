@@ -3,7 +3,7 @@
 function Pizza(size, toppings) {
     this.size = size,
     this.toppings = toppings,
-    this.price = 8
+    this.basePrice = 8
 };
 
 //Add size of pizza
