@@ -1,27 +1,61 @@
 // Business-Logic----
 
 function Pizza(size, toppings) {
-    this.size = size,
+  this.size = size,
     this.toppings = toppings,
     this.basePrice = 8
 };
 
 //Add size of pizza
+Pizza.prototype.addSize = function(size) {
+this.size = size;
+};
 
 //Add topping of pizza
+Pizza.prototype.addToppings = function(toppings) {
+  this.toppings = toppings;
+};
 
 //Pizza price by size
+Pizza.prototype.priceBySize = function(size) {
+  this.size = size;
+  if(this.size === "small") {
+    this.basePrice;
+  } else if (this.size === "medium") {
+    this.basePrice += 2;
+  } else if (this.size === "large") {
+    this.basePrice += 4;
+  } else {
+  }
+};
 
 //pizza price by topping
+Pizza.prototype.priceByToppings = function(topping) {
+  if (topping === "noSauce") {
+    this.basePrice -= 1;
+  } else if (topping === "onions") {
+    this.basePrice += 1;
+  } else if (topping === "olives") {
+    this.basePrice += 1;
+  } else if (topping === "pepperoni") {
+    this.basePrice += 3;
+  } else if (topping === "sausage") {
+    this.basePrice += 3;
+  } else if (topping === "chicken") {
+    this.basePrice += 4;
+  } else if (topping === "prototype-sauce") {
+    this.basePrice += 2;
+  }
+};
 
 //User-Logic----
 
-$(document).ready(function(){
-    var pizza = new Pizza
+$(document).ready(function () {
+  var pizza = new Pizza
 
-    $("button#pizzaButton").click(function(event) {
-        event.preventDefault();
-        $("button#pizzaButton").hide();
-        $("#jumbotron-pizza-options").show();
-    });
+  $("button#pizzaButton").click(function (event) {
+    event.preventDefault();
+    $("button#pizzaButton").hide();
+    $("#jumbotron-pizza-options").show();
+  });
 });
