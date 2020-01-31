@@ -1,8 +1,20 @@
-// Business-Logic
+// Business-Logic----
 
+function Pizza(size, toppings) {
+    this.size = size,
+    this.toppings = toppings,
+    this.price = 8
+};
 
+//Add size of pizza
 
-//User-Logic
+//Add topping of pizza
+
+//Pizza price by size
+
+//pizza price by topping
+
+//User-Logic----
 
 $(document).ready(function(){
 
