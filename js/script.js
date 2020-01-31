@@ -48,6 +48,11 @@ Pizza.prototype.priceByToppings = function(topping) {
   }
 };
 
+//Convert toppings to text
+Pizza.prototype.arrayDisplay = function() {
+  this.toppings.toString();
+};
+
 //User-Logic----
 
 $(document).ready(function() {
@@ -64,6 +69,9 @@ $(document).ready(function() {
         return false;
       };
     var pizza = new Pizza();
+    var size = $(this.sze).val();
+    pizza.priceBySize(size);
+    var toppings = [];
 
   });
 });
