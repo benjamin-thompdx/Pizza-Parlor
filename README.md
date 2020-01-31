@@ -15,7 +15,7 @@ _A website where users can order pizza and customize their order by selecting a 
 |1. A button labeled "Order Now" is displayed for the user to click on to start a pizza order| User clicks "Order Now" button|Pizza order options apear|
 |2. User is presented with a dropdown menu to selct their pizza size|User clicks on a pizza size option|User input is submitted and user can then see the option they picked|
 |3. User can then select pizza toppings from a list of checkbox options|User clicks on all checkbox topping options that they would like to include on their pizza|User can see all topping options they have clicked on|
-|4. User clicks "Order Now" button to finalize order and is provided with a summary and the total cost of their order|User clicks "Order Now" button|User input is submitted and the user's order is displayed (pizza size and toppings) along with the total cost of the order|
+|4. User clicks "Place Order" button to finalize order and is provided with a summary and the total cost of their order|User clicks "Place Order" button|User input is submitted and the user's order is displayed (pizza size and toppings) along with the total cost of the order|
 
 
 ## Setup/Installation Requirements
