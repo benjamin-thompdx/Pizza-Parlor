@@ -72,6 +72,9 @@ $(document).ready(function() {
     var size = $(this.size).val();
     pizza.priceBySize(size);
     var toppings = [];
-
+    $.each($("input:checkbox[name=topping]:checked"), function() {
+      toppings.push($(this).val());
+      console.log(pizza);
+    });
   });
 });
