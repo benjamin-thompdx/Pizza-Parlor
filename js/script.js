@@ -17,6 +17,7 @@ function Pizza(size, toppings) {
 //User-Logic----
 
 $(document).ready(function(){
+    var pizza = new Pizza
 
     $("button#pizzaButton").click(function(event) {
         event.preventDefault();
