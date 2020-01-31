@@ -19,7 +19,7 @@ Pizza.prototype.addToppings = function(toppings) {
 //Pizza price by size
 Pizza.prototype.priceBySize = function(size) {
   this.size = size;
-  if(this.size === "small") {
+  if (this.size === "small") {
     this.basePrice;
   } else if (this.size === "medium") {
     this.basePrice += 2;
@@ -50,12 +50,20 @@ Pizza.prototype.priceByToppings = function(topping) {
 
 //User-Logic----
 
-$(document).ready(function () {
-  var pizza = new Pizza
-
-  $("button#pizzaButton").click(function (event) {
+$(document).ready(function() {
+  $("button#pizzaButton").click(function(event) {
     event.preventDefault();
     $("button#pizzaButton").hide();
     $("#jumbotron-pizza-options").show();
+  });
+  $("form.pizzaOptions").submit(function(event) {
+    event.preventDefault();
+    checked = $("input[type=checkbox]:checked").length;
+      if (!checked) {
+        alert("Please select atleast one option");
+        return false;
+      };
+    var pizza = new Pizza();
+
   });
 });
