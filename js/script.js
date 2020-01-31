@@ -74,7 +74,11 @@ $(document).ready(function() {
     var toppings = [];
     $.each($("input:checkbox[name=topping]:checked"), function() {
       toppings.push($(this).val());
-      console.log(pizza);
     });
+    pizza.addToppings(toppings);
+    for (var i = 0; i < pizza.toppings.length; i++) {
+      pizza.priceByToppings(toppings[i]);
+    };
+    
   });
 });
