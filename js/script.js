@@ -9,6 +9,6 @@ $(document).ready(function(){
     $("button#pizzaButton").click(function(event) {
         event.preventDefault();
         $("button#pizzaButton").hide();
-        $("form.pizzaOptions").show();
+        $("#jumbotron-pizza-options").show();
     });
 });

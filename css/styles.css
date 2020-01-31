@@ -6,6 +6,6 @@ body {
     text-align: center;
 }
 
-form.pizzaOptions {
+#jumbotron-pizza-options {
     display: none;
 }

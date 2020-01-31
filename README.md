@@ -6,7 +6,7 @@
 
 ## Description
 
-_A website where users can order pizza and customize their order by selecting a pizza size (small, medium, large), choosing one or more pizza toppings (cheese, onions, olives, pepperoni, sausage, chicken, prototype sauce), and see the cost of their order._
+_A website where users can order pizza and customize their order by selecting a pizza size (small, medium, large), choosing one or more pizza toppings (no sauce, onions, olives, pepperoni, sausage, chicken, prototype sauce), and see the cost of their order._
 
 ## Project Specifications
 
