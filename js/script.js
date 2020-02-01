@@ -61,7 +61,7 @@ $(document).ready(function() {
     $("button#pizzaButton").hide();
     $("#jumbotron-pizza-options").show();
   });
-  $("form.pizzaOptions").submit(function(event) {
+  $("form.pizza-options").submit(function(event) {
     event.preventDefault();
     checked = $("input[type=checkbox]:checked").length;
       if (!checked) {
@@ -79,6 +79,9 @@ $(document).ready(function() {
     for (var i = 0; i < pizza.toppings.length; i++) {
       pizza.priceByToppings(toppings[i]);
     };
-    
+    $("#jumbotron-pizza-options").hide();
+    $("div.checkout").show();
+    $("h4.checkout-selections").append("Get ready for a delicious " + $("#size").children("option:selected").text() + " Bits & Bytes pizza with " + pizza.toppings.toString() + ".");
+    $("h4.checkout-cost").append("Total: $" + pizza.basePrice);
   });
 });

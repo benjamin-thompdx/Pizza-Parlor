@@ -9,3 +9,7 @@ body {
 #jumbotron-pizza-options {
     display: none;
 }
+
+div.checkout {
+    display: none;
+}
