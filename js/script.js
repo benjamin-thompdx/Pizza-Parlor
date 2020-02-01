@@ -31,7 +31,7 @@ Pizza.prototype.priceBySize = function(size) {
 
 //pizza price by topping
 Pizza.prototype.priceByToppings = function(topping) {
-  if (topping === "noSauce") {
+  if (topping === "no-sauce") {
     this.basePrice -= 1;
   } else if (topping === "onions") {
     this.basePrice += 1;
@@ -56,9 +56,10 @@ Pizza.prototype.arrayDisplay = function() {
 //User-Logic----
 
 $(document).ready(function() {
-  $("button#pizzaButton").click(function(event) {
+  $("button#order-now-button").click(function(event) {
     event.preventDefault();
-    $("button#pizzaButton").hide();
+    $("button#order-now-button").hide();
+    $("button#menu-button").hide();
     $("#jumbotron-pizza-options").show();
   });
   $("form.pizza-options").submit(function(event) {

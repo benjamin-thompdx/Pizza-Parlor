@@ -7,6 +7,9 @@
 		<meta name="description" content="Bits & Bytes Pizza">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
@@ -16,7 +19,8 @@
 			<br>
 			<div id="jumbotron-order-now" class="jumbotron">
 				<h1>Bits & Bytes Pizza</h1>
-				<button id="pizzaButton" type="button" class="btn btn-danger">Order Now</button>
+				<button id="order-now-button" type="button" class="btn btn-danger">Order Now</button>
+				<button id="menu-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Menu</button>
 			</div>
 			<div id="jumbotron-pizza-options" class="jumbotron">
 				<h3>Customize Your Pie:</h3>
@@ -34,8 +38,8 @@
 					<h5>What toppings would you like to include?</h5>
 					<div class="topping-options">
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="noSauce" name="topping">
-							<label class="form-check-label" for="noSauce">
+							<input class="form-check-input" type="checkbox" value="no-sauce" name="topping">
+							<label class="form-check-label" for="no-sauce">
 								No Sauce
 							</label>
 						</div>
@@ -86,5 +90,22 @@
 				<h4 class="checkout-cost"></h4>
 			</div>
 		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Create Your Own Pizza</h4>
+          </div>
+          <div class="modal-body">
+            <p>No sauce to our house made Prototype Sauce, the world is your oyster...err...pizza!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+          </div>
+        </div>
 	</body>
 </html>
