@@ -2,18 +2,8 @@
 
 function Pizza(size, toppings) {
   this.size = size,
-    this.toppings = toppings,
-    this.basePrice = 8
-};
-
-//Add size of pizza
-Pizza.prototype.addSize = function(size) {
-this.size = size;
-};
-
-//Add topping of pizza
-Pizza.prototype.addToppings = function(toppings) {
-  this.toppings = toppings;
+  this.toppings = [],
+  this.basePrice = 8
 };
 
 //Pizza price by size
@@ -72,14 +62,13 @@ $(document).ready(function() {
     var pizza = new Pizza();
     var size = $(this.size).val();
     pizza.priceBySize(size);
-    var toppings = [];
+    var toppings = (pizza.toppings);
     $.each($("input:checkbox[name=topping]:checked"), function() {
       toppings.push($(this).val());
+      for (var i = 0; i < pizza.toppings.length; i++) {
+        pizza.priceByToppings(toppings[i]);
+      };
     });
-    pizza.addToppings(toppings);
-    for (var i = 0; i < pizza.toppings.length; i++) {
-      pizza.priceByToppings(toppings[i]);
-    };
     $("#jumbotron-pizza-options").hide();
     $("div.checkout").show();
     $("h4.checkout-selections").append("Get ready for a delicious " + $("#size").children("option:selected").text() + " Bits & Bytes pizza with " + pizza.toppings.toString() + ".");
